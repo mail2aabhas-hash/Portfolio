@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aabhas Solanki - Full Stack Web Developer & Mobile App Developer">
+    <title>Aabhas Solanki | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Door Opening Animation -->
+    <div class="door-container" id="doorContainer">
+        <div class="door door-left">
+            <div class="door-circuit"></div>
+        </div>
+        <div class="door door-right">
+            <div class="door-circuit"></div>
+        </div>
+        <div class="door-text">
+            <h1>INITIALIZING</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-percent">0%</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">AS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-text="AABHAS SOLANKI">AABHAS SOLANKI</h1>
+                    <div class="typing-container">
+                        <h2 class="hero-subtitle">
+                            <span class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </h2>
+                    </div>
+                    <p class="hero-description">
+                        Full Stack Web Developer & Mobile App Developer specializing in building 
+                        <span class="highlight">robust, scalable, and cost-efficient</span> digital solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com/your_username" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/your_username" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                        <img src="your-photo.jpg" alt="Aabhas Solanki" class="profile-img">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_WHO I AM</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm <span class="highlight">Aabhas Solanki</span>, a Full Stack Web Developer and Mobile App Developer 
+                        specializing in building robust, scalable, and cost-efficient digital solutions.
+                    </p>
+                    <p>
+                        With <strong>2 years of development experience</strong> and <strong>1 year running my own development business</strong>, 
+                        I create responsive websites and mobile applications using modern technologies like React, MERN Stack, Flutter, and more.
+                    </p>
+                    <p>
+                        I work with a dedicated team of developers and offer end-to-end solutions - from design and development 
+                        to backend infrastructure and ongoing maintenance. Whether it's a static website, dynamic web application, 
+                        or full-featured Android app with real-time databases and automation, I deliver high-performance projects 
+                        tailored to your business needs.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1+</h3>
+                            <p>Years Business</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_WHAT I DO</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Dart Frog</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Firestore</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">NoSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Android Development</span>
+                        <span class="skill-tag">Cross-Platform</span>
+                        <span class="skill-tag">Flutter Flow</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Full Stack</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">MERN Stack</span>
+                        <span class="skill-tag">Full Stack Development</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Cloud Services</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Additional Skills</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Email Automation</span>
+                        <span class="skill-tag">Notifications</span>
+                        <span class="skill-tag">Error Handling</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                        <span class="skill-tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_MY WORK</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project1-preview.jpg" alt="Your Vehicles Care">
+                        <div class="project-overlay">
+                            <a href="https://yourvehiclescare.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS/JS</span>
+                            <span class="tag">Dart Frog</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <h3 class="project-title">Your Vehicles Care</h3>
+                        <p class="project-description">
+                            A complete full-stack business website and Android app for my family's car mechanic business. 
+                            Handles complete business operations including service bookings, customer management, and automated notifications. 
+                            Built with HTML/CSS/JS frontend, Dart Frog backend, Flutter mobile app, Node.js, and Firebase database.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Full Business Management</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Mobile App Integration</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Real-time Database</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Automated Notifications</span>
+                            </div>
+                        </div>
+                        <a href="https://yourvehiclescare.com" target="_blank" class="project-btn">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_WHAT WE OFFER</span>
+                <h2 class="section-title">Our Services</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Design & Development</h3>
+                    <p>Custom website design and development tailored to your business needs. Responsive, modern, and optimized for performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications using Flutter. Full Android development with seamless backend integration.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end development using MERN stack, handling both frontend and backend with scalable architecture.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Robust backend solutions with Node.js, Python, PHP, and Dart Frog. SQL and NoSQL database integration with Redis caching.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Website & Backend Maintenance</h3>
+                    <p>Ongoing maintenance and support for websites and backend systems. Regular updates, bug fixes, and performance optimization.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Automation & Notifications</h3>
+                    <p>Automated email systems, push notifications, and workflow automation to streamline your business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_OUR TEAM</span>
+                <h2 class="section-title">Meet the Team</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="team-content">
+                <p class="team-intro">
+                    We work with a dedicated team of professional developers to deliver high-quality solutions. 
+                    Our team consists of specialized experts in frontend and backend development, ensuring 
+                    every aspect of your project is handled by skilled professionals.
+                </p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Frontend Developer</h3>
+                        <p>Specialized in creating beautiful, responsive user interfaces with modern frameworks and best practices.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Developer</h3>
+                        <p>Expert in building scalable server architectures, databases, and APIs for robust applications.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Design Partners</h3>
+                        <p>Partnered with professional design companies for bulk design work at competitive rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">_GET IN TOUCH</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>Have a project in mind? Let's discuss how I can help bring your ideas to life with modern, scalable solutions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+919999999999">+91 99999 99999</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Your City, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://instagram.com/your_username" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/your_username" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Aabhas Solanki</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p>&copy; 2025 Aabhas Solanki. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
