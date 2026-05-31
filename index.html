@@ -1435,12 +1435,19 @@
         });
 
         // ==================== 3D CARD TILT (DESKTOP & MOBILE) ====================
-        const tiltElements = document.querySelectorAll('.glass-card:not(#about .glass-card), .project-image');
+        
+        // 1. Desktop Targets: Includes EVERYTHING (Hero Image, About Card, Projects, Services)
+        const desktopTiltElements = document.querySelectorAll('.glass-card, .project-image, .image-frame');
+        
+        // 2. Mobile Targets: EXCLUDES the Hero Image and About Card
+        const mobileTiltElements = document.querySelectorAll('.glass-card:not(#about .glass-card), .project-image');
+
         // 1. Desktop Mouse Effect
         document.addEventListener('mousemove', (e) => {
             if(window.innerWidth < 768) return; 
             
-            tiltElements.forEach(card => {
+            // Uses desktopTiltElements
+            desktopTiltElements.forEach(card => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX;
                 const y = e.clientY;
@@ -1466,11 +1473,11 @@
                 let beta = Math.min(Math.max(e.beta, -60), 60);   
                 let gamma = Math.min(Math.max(e.gamma, -45), 45); 
 
-                // Removed the * -1 from rotateX to reverse the vertical tilt
-                const rotateX = (beta / 2.5)*-1; 
+                const rotateX = (beta / 1.1); 
                 const rotateY = (gamma / 1.5);
 
-                tiltElements.forEach(card => {
+                // Uses mobileTiltElements
+                mobileTiltElements.forEach(card => {
                     const rect = card.getBoundingClientRect();
                     const inView = (rect.top < window.innerHeight && rect.bottom > 0);
 
