@@ -1465,7 +1465,7 @@
                 let gamma = Math.min(Math.max(e.gamma, -45), 45); 
 
                 // Removed the * -1 from rotateX to reverse the vertical tilt
-                const rotateX = (beta / 1.1); 
+                const rotateX = (beta / 1.0)*-1; 
                 const rotateY = (gamma / 1.5);
 
                 tiltElements.forEach(card => {
