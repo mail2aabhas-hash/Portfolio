@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <style>
+     <style>
         /* ==================== VARIABLES ==================== */
         :root {
             /* Light Theme */
@@ -211,24 +211,27 @@
         }
 
         /* ==================== NAVIGATION ==================== */
+        /* ==================== NAVIGATION ==================== */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: transparent; /* Completely transparent at the very top */
             padding: 20px 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid transparent;
             transition: all 0.3s ease;
         }
 
         .navbar.scrolled {
             padding: 15px 0;
-            background: rgba(5, 5, 5, 0.95);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            /* The Glassmorphism Magic */
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px var(--shadow);
         }
 
         .nav-container {
