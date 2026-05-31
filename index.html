@@ -1435,8 +1435,7 @@
         });
 
         // ==================== 3D CARD TILT (DESKTOP & MOBILE) ====================
-        const tiltElements = document.querySelectorAll('.glass-card, .project-image, .image-frame');
-
+        const tiltElements = document.querySelectorAll('.glass-card:not(#about .glass-card), .project-image');
         // 1. Desktop Mouse Effect
         document.addEventListener('mousemove', (e) => {
             if(window.innerWidth < 768) return; 
