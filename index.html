@@ -1209,7 +1209,7 @@
         </div>
     </footer>
 
-    <script>
+   <script>
         // ==================== 3D DOOR ANIMATION ====================
         window.addEventListener('load', () => {
             const doorContainer = document.getElementById('doorContainer');
@@ -1432,7 +1432,6 @@
         });
 
         // ==================== 3D CARD TILT (DESKTOP & MOBILE) ====================
-        // Added .image-frame to apply the effect to the hero image
         const tiltElements = document.querySelectorAll('.glass-card, .project-image, .image-frame');
 
         // 1. Desktop Mouse Effect
@@ -1462,11 +1461,11 @@
             window.addEventListener('deviceorientation', (e) => {
                 if(window.innerWidth >= 768) return; 
 
-                // Enhanced clamps and depth
                 let beta = Math.min(Math.max(e.beta, -60), 60);   
                 let gamma = Math.min(Math.max(e.gamma, -45), 45); 
 
-                const rotateX = (beta / 1.1) * -1; 
+                // Removed the * -1 from rotateX to reverse the vertical tilt
+                const rotateX = (beta / 1.1); 
                 const rotateY = (gamma / 1.5);
 
                 tiltElements.forEach(card => {
