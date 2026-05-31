@@ -6,7 +6,6 @@
     <meta name="description" content="Aabhas Solanki - Full Stack Web Developer & Mobile App Developer">
     <title>Aabhas Solanki | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Using a Google Font that matches the premium feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -56,7 +55,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: none; /* Hide default cursor for custom one */
+            cursor: none; 
         }
 
         html {
@@ -108,7 +107,6 @@
             opacity: 1;
         }
         
-        /* Hover state for cursor */
         body.hovering .cursor-outline {
             width: 60px;
             height: 60px;
@@ -341,7 +339,6 @@
             overflow: hidden;
         }
 
-        /* Particle Canvas Background */
         #particles-canvas {
             position: absolute;
             top: 0;
@@ -624,22 +621,29 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            padding: 0; /* Reset padding */
+            padding: 0; 
             background: transparent;
             border: none;
+            align-items: center; 
         }
 
         .project-image {
-            position: relative;
+            position: relative; 
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
+            width: 100% !important;
+            height: 350px !important; 
         }
 
         .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important; 
+            object-position: top center !important; 
             transition: transform 0.5s;
         }
 
@@ -805,11 +809,9 @@
 </head>
 <body>
 
-    <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
 
-    <!-- Door Animation -->
     <div class="door-container" id="doorContainer">
         <div class="door door-left"></div>
         <div class="door door-right"></div>
@@ -821,7 +823,6 @@
         </div>
     </div>
 
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
@@ -850,9 +851,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Canvas for particles -->
         <canvas id="particles-canvas"></canvas>
         
         <div class="hero-content">
@@ -880,7 +879,6 @@
             
             <div class="hero-image-container" id="heroImage">
                 <div class="image-frame">
-                    <!-- Using your uploaded image, but adding onerror for portability -->
                     <img src="image.png" 
                          onerror="this.src='https://placehold.co/400x400/1a1a1a/00d9ff?text=AS'" 
                          alt="Aabhas Solanki" 
@@ -890,7 +888,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="section-header reveal">
@@ -928,7 +925,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="container">
             <div class="section-header reveal">
@@ -937,7 +933,6 @@
                 <div class="title-line"></div>
             </div>
             <div class="skills-grid">
-                <!-- Frontend -->
                 <div class="glass-card skill-category reveal">
                     <div class="category-header">
                         <i class="fas fa-code"></i>
@@ -951,7 +946,6 @@
                         <span class="skill-tag">Bootstrap</span>
                     </div>
                 </div>
-                <!-- Backend -->
                 <div class="glass-card skill-category reveal">
                     <div class="category-header">
                         <i class="fas fa-server"></i>
@@ -965,7 +959,6 @@
                         <span class="skill-tag">Redis</span>
                     </div>
                 </div>
-                <!-- Mobile -->
                 <div class="glass-card skill-category reveal">
                     <div class="category-header">
                         <i class="fas fa-mobile-alt"></i>
@@ -978,7 +971,6 @@
                         <span class="skill-tag">FlutterFlow</span>
                     </div>
                 </div>
-                <!-- Database -->
                 <div class="glass-card skill-category reveal">
                     <div class="category-header">
                         <i class="fas fa-database"></i>
@@ -995,7 +987,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="section" id="projects">
         <div class="container">
             <div class="section-header reveal">
@@ -1004,7 +995,7 @@
                 <div class="title-line"></div>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                
                 <div class="project-card reveal">
                     <div class="project-image">
                         <img src="Your Vehicles Care.png" 
@@ -1032,65 +1023,96 @@
                         </a>
                     </div>
                 </div>
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="Your Vehicles Care.png" 
-                             onerror="this.src='https://placehold.co/600x400/111/00d9ff?text=Project+Screenshot'" 
-                             alt="Your Vehicles Care">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">Dart Frog</span>
-                            <span class="skill-tag">Firebase</span>
-                        </div>
-                        <h3 class="project-title">Your Vehicles Care</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                            A complete full-stack business ecosystem for a car mechanic business. Includes a customer-facing Android app, a service booking website, and an admin dashboard for operations management.
-                        </p>
-                        <div class="project-features">
-                            <div><i class="fas fa-check"></i> Real-time Booking</div>
-                            <div><i class="fas fa-check"></i> Customer Management</div>
-                            <div><i class="fas fa-check"></i> Auto Notifications</div>
-                            <div><i class="fas fa-check"></i> Payment Integration</div>
-                        </div>
-                        <a href="https://yourvehiclescare.com" target="_blank" class="btn btn-primary" style="align-self: flex-start;">
-                            Visit Live Site
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <img src="Your Vehicles Care.png" 
-                             onerror="this.src='https://placehold.co/600x400/111/00d9ff?text=Project+Screenshot'" 
-                             alt="Your Vehicles Care">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="skill-tag">Flutter</span>
-                            <span class="skill-tag">Dart Frog</span>
-                            <span class="skill-tag">Firebase</span>
-                        </div>
-                        <h3 class="project-title">Your Vehicles Care</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                            A complete full-stack business ecosystem for a car mechanic business. Includes a customer-facing Android app, a service booking website, and an admin dashboard for operations management.
-                        </p>
-                        <div class="project-features">
-                            <div><i class="fas fa-check"></i> Real-time Booking</div>
-                            <div><i class="fas fa-check"></i> Customer Management</div>
-                            <div><i class="fas fa-check"></i> Auto Notifications</div>
-                            <div><i class="fas fa-check"></i> Payment Integration</div>
-                        </div>
-                        <a href="https://yourvehiclescare.com" target="_blank" class="btn btn-primary" style="align-self: flex-start;">
-                            Visit Live Site
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="moonlight.png" 
+                             onerror="this.src='https://placehold.co/600x400/111/00d9ff?text=Moonlight+Perfumes'" 
+                             alt="Moonlight Perfumes">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="skill-tag">Premium Fragrance</span>
+                            <span class="skill-tag">E-Commerce</span>
+                            <span class="skill-tag">Digital Branding</span>
+                        </div>
+                        <h3 class="project-title">Moonlight Perfumes</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                            A bespoke digital flagship for an artisanal perfume house. Built to evoke elegance and sophisticated branding, this platform provides an immersive experience for customers to explore and purchase curated collections of premium scents.
+                        </p>
+                        <div class="project-features">
+                            <div><i class="fas fa-check"></i> Custom Design (Luxury Aesthetic)</div>
+                            <div><i class="fas fa-check"></i> Immersive Brand Storytelling</div>
+                            <div><i class="fas fa-check"></i> High-Resolution Product Visuals</div>
+                            <div><i class="fas fa-check"></i> Curated Fragrance Catalog</div>
+                            <div><i class="fas fa-check"></i> Secure E-Commerce Checkout</div>
+                        </div>
+                        <a href="https://moonlightcorp.in" target="_blank" class="btn btn-primary" style="align-self: flex-start;">
+                            Visit Live Site
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="triptirth.png" 
+                             onerror="this.src='https://placehold.co/600x400/111/00d9ff?text=Triptirth+Tours'" 
+                             alt="Triptirth Tours">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="skill-tag">Travel Agency</span>
+                            <span class="skill-tag">Booking Platform</span>
+                            <span class="skill-tag">Leisure</span>
+                        </div>
+                        <h3 class="project-title">Triptirth Tours</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                            A feature-rich travel booking website designed for a dedicated tour agency. Provides a clean interface for users to browse, explore, and book various holiday packages, pilgrim tours, and custom itineraries.
+                        </p>
+                        <div class="project-features">
+                            <div><i class="fas fa-check"></i> Dynamic Content</div>
+                            <div><i class="fas fa-check"></i> User-Friendly UI</div>
+                            <div><i class="fas fa-check"></i> Package Listings</div>
+                            <div><i class="fas fa-check"></i> Secure Payments</div>
+                            <div><i class="fas fa-check"></i> Itinerary Management</div>
+                        </div>
+                        <a href="https://triptirth.com" target="_blank" class="btn btn-primary" style="align-self: flex-start;">
+                            Visit Live Site
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="mobile-cms.png" 
+                             onerror="this.src='https://placehold.co/600x400/111/00d9ff?text=Mobile+CMS'" 
+                             alt="Mobile-Controlled CMS">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Web Integration</span>
+                            <span class="skill-tag">Real-time DB</span>
+                        </div>
+                        <h3 class="project-title">Mobile-Controlled CMS</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                            An innovative offline project featuring a dynamic website that can be entirely controlled, updated, and managed remotely through a custom mobile application.
+                        </p>
+                        <div class="project-features">
+                            <div><i class="fas fa-check"></i> Custom Mobile App</div>
+                            <div><i class="fas fa-check"></i> Real-time Sync</div>
+                            <div><i class="fas fa-check"></i> Remote Management</div>
+                            <div><i class="fas fa-check"></i> Mobile Dashboard</div>
+                            <div><i class="fas fa-check"></i> Dynamic Content Controls</div>
+                        </div>
+                        <button class="btn btn-secondary" style="align-self: flex-start; cursor: default;">
+                            Offline Project
+                        </button>
+                    </div>
+                </div>
+
+            </div> </div> </section>
+
     <section class="section" id="services">
         <div class="container">
             <div class="section-header reveal">
@@ -1118,7 +1140,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header reveal">
@@ -1160,15 +1181,21 @@
                     
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <input type="tel" id="phone" placeholder="Your Phone No. (Optional)">
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div id="formStatus" style="margin-bottom: 15px; font-weight: 600; display: none;"></div>
+                        
+                        <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1177,7 +1204,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Aabhas Solanki. All rights reserved.</p>
+            <p>&copy; 2026 Aabhas Solanki. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1187,19 +1214,14 @@
             const doorContainer = document.getElementById('doorContainer');
             const progress = document.querySelector('.loading-progress');
             
-            // Simulate loading
             setTimeout(() => { progress.style.width = '50%'; }, 200);
             setTimeout(() => { progress.style.width = '100%'; }, 600);
             
             setTimeout(() => {
                 doorContainer.classList.add('opening');
-                
-                // Start other animations after door opens
                 setTimeout(() => {
                     initParticles();
                     typeEffect();
-                    
-                    // Hide container to allow clicking underneath
                     setTimeout(() => {
                         doorContainer.style.display = 'none';
                     }, 1000);
@@ -1218,14 +1240,12 @@
             cursorDot.style.left = `${posX}px`;
             cursorDot.style.top = `${posY}px`;
 
-            // Slight lag for outline
             cursorOutline.animate({
                 left: `${posX}px`,
                 top: `${posY}px`
             }, { duration: 500, fill: "forwards" });
         });
 
-        // Add hover effect to links and buttons
         const hoverables = document.querySelectorAll('a, button, .glass-card');
         hoverables.forEach(el => {
             el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
@@ -1267,7 +1287,6 @@
 
             function init() {
                 particlesArray = [];
-                // Check theme for color
                 const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
                 const pColor = isDark ? 'rgba(0, 217, 255, 0.5)' : 'rgba(0, 0, 0, 0.2)';
                 
@@ -1286,7 +1305,6 @@
             function animate() {
                 requestAnimationFrame(animate);
                 ctx.clearRect(0, 0, innerWidth, innerHeight);
-                
                 for (let i = 0; i < particlesArray.length; i++) {
                     particlesArray[i].update();
                 }
@@ -1323,7 +1341,6 @@
                 init();
             });
             
-            // Listen for theme change to update particle color
             const observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
                     if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
@@ -1355,11 +1372,11 @@
 
                 if (!isDeleting && charIndex === currentPhrase.length) {
                     isDeleting = true;
-                    setTimeout(type, 2000); // Pause at end
+                    setTimeout(type, 2000); 
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
                     phraseIndex = (phraseIndex + 1) % phrases.length;
-                    setTimeout(type, 500); // Pause before new word
+                    setTimeout(type, 500); 
                 } else {
                     const speed = isDeleting ? 50 : 100;
                     setTimeout(type, speed);
@@ -1368,13 +1385,11 @@
             type();
         }
 
-        // ==================== SCROLL REVEAL & STAGGER ====================
+        // ==================== SCROLL REVEAL ====================
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Optional: stop observing once revealed
-                    // revealObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
@@ -1385,14 +1400,12 @@
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
 
-        // Set default to dark
         htmlElement.setAttribute('data-theme', 'dark');
         
         themeToggle.addEventListener('click', () => {
             const current = htmlElement.getAttribute('data-theme');
             const next = current === 'dark' ? 'light' : 'dark';
             htmlElement.setAttribute('data-theme', next);
-            
             themeToggle.querySelector('i').className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
         });
 
@@ -1419,18 +1432,17 @@
 
         // ==================== 3D CARD TILT ====================
         document.addEventListener('mousemove', (e) => {
-            if(window.innerWidth < 768) return; // Disable on mobile
+            if(window.innerWidth < 768) return; 
             
             document.querySelectorAll('.glass-card, .project-image').forEach(card => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX;
                 const y = e.clientY;
                 
-                // Check if mouse is near the card to save processing
                 if(x > rect.left - 50 && x < rect.right + 50 && y > rect.top - 50 && y < rect.bottom + 50) {
                     const centerX = rect.left + rect.width / 2;
                     const centerY = rect.top + rect.height / 2;
-                    const rotateX = ((y - centerY) / 20) * -1; // Inverse for feel
+                    const rotateX = ((y - centerY) / 20) * -1;
                     const rotateY = (x - centerX) / 20;
                     
                     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
@@ -1438,6 +1450,86 @@
                     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
                 }
             });
+        });
+    </script>
+
+    <script type="module">
+        // 1. Import Firebase core, Analytics, and Firestore (using your exact v12.14.0 version)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+        // 2. YOUR exact Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA-gHjESgFcDChNb4AqvtRxLlIuFYtvO14",
+            authDomain: "message-receiver-75417.firebaseapp.com",
+            projectId: "message-receiver-75417",
+            storageBucket: "message-receiver-75417.firebasestorage.app",
+            messagingSenderId: "1013044977714",
+            appId: "1:1013044977714:web:804863a6171488c221dc2b",
+            measurementId: "G-HNZW4CQLG6"
+        };
+
+        // 3. Initialize Firebase, Analytics, and Firestore
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // 4. Handle Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            formStatus.style.display = 'none';
+
+            // Get values from the form
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            try {
+                // Ensure the payload matches the security rules
+                let payload = {
+                    name: name,
+                    email: email,
+                    message: message,
+                    createdAt: serverTimestamp()
+                };
+
+                // Only add phone to payload if the user typed something
+                if (phone !== "") {
+                    payload.phone = phone;
+                }
+
+                // Send to Firestore
+                await addDoc(collection(db, "messages"), payload);
+
+                // Show success message
+                formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
+                formStatus.style.color = 'var(--electric-blue)';
+                formStatus.style.display = 'block';
+                
+                // Clear the form
+                contactForm.reset();
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                
+                // Show error message
+                formStatus.textContent = 'Failed to send message. Please try again.';
+                formStatus.style.color = '#ff4444'; 
+                formStatus.style.display = 'block';
+            } finally {
+                // Re-enable the button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            }
         });
     </script>
 </body>
