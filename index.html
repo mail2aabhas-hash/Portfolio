@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
-     <style>
+    <style>
         /* ==================== VARIABLES ==================== */
         :root {
             /* Light Theme */
@@ -1212,7 +1212,7 @@
         </div>
     </footer>
 
-   <script>
+    <script>
         // ==================== 3D DOOR ANIMATION ====================
         window.addEventListener('load', () => {
             const doorContainer = document.getElementById('doorContainer');
@@ -1540,7 +1540,23 @@
 
                 // Only add phone to payload if the user typed something
                 if (phone !== "") {
-                    payload.phone = phone;
+                    let formattedPhone = phone;
+                    
+                    // 1. Strip out any spaces or dashes the user might have accidentally typed
+                    formattedPhone = formattedPhone.replace(/[\s-]/g, '');
+
+                    // 2. Check if the number lacks the '+' symbol
+                    if (!formattedPhone.startsWith('+')) {
+                        // If they typed '91' at the start but forgot the '+', just add the '+'
+                        // Otherwise, prepend the full '+91'
+                        if (formattedPhone.startsWith('91') && formattedPhone.length > 10) {
+                            formattedPhone = '+' + formattedPhone;
+                        } else {
+                            formattedPhone = '+91' + formattedPhone;
+                        }
+                    }
+                    
+                    payload.phone = formattedPhone;
                 }
 
                 // Send to Firestore
